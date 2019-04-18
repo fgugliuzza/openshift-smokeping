@@ -21,7 +21,7 @@ param_volumes:
   - { vol_path: "/data", vol_host_path: "</path/to/{{ project_name }}/data>", desc: "Storage location for db and application data (graphs etc)" }
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver." }
+  - { external_port: "8080", internal_port: "8080", port_desc: "Allows HTTP access to the internal webserver." }
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}

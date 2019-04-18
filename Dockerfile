@@ -41,6 +41,9 @@ RUN \
 # add local files
 COPY root/ /
 
+
+# USER 1001
+
 # ports and volumes
-EXPOSE 80
+EXPOSE 8080
 VOLUME /config /data
