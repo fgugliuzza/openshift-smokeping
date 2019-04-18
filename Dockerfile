@@ -23,7 +23,10 @@ RUN \
 	ssmtp \
 	sudo \
 	tcptraceroute \
-	ttf-dejavu && \
+	ttf-dejavu \
+	popt \
+	libidn \
+	openssl && \
  echo "**** give abc sudo access to traceroute & tcptraceroute ****" && \
  echo \
  "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> \
@@ -41,6 +44,8 @@ RUN \
 # add local files
 COPY root/ /
 
+# extract echoping archive
+ADD echoping.tar.gz /
 
 # USER 1001
 
